@@ -1,0 +1,8 @@
+{
+  "name": "KOPA | Innovation-Led PPC & Paid Social",
+  "description": "State-of-the-art PPC and Paid Social solutions for those who value movement over vanity metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

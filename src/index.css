@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Permanent+Marker&family=Sedgwick+Ave+Display&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-marker: "Permanent Marker", cursive;
+  --font-graffiti: "Sedgwick Ave Display", cursive;
+  
+  --color-accent: #ffb07c; /* Forced Peach Update */
+  --color-bg: #0a0a0a;
+  --color-card: #111111;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-white font-sans overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .wall-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Extreme Bold Heading Styling */
+  .massive-type {
+    @apply font-black leading-[0.85] uppercase -ml-1 tracking-tighter;
+  }
+
+  .highlight-tag {
+    @apply inline-block bg-accent text-black px-4 py-2 transform -rotate-2 -ml-2;
+  }
+
+  .sketch-card {
+    @apply border-2 border-border bg-card transition-all duration-300 relative;
+  }
+  
+  .sketch-card:hover {
+    @apply border-accent -translate-x-1 -translate-y-1;
+    box-shadow: 8px 8px 0px var(--color-accent);
+  }
+
+  .btn-tag {
+    @apply bg-accent text-black px-8 py-4 font-black uppercase inline-block -rotate-1 transition-transform duration-200;
+  }
+  
+  .btn-tag:hover {
+    @apply rotate-0 scale-105;
+    box-shadow: 0 0 20px rgba(255, 176, 124, 0.4);
+  }
+}
